@@ -1,0 +1,18 @@
+[package]
+name = "trait_impl"
+version = "0.1.0"
+edition = "2018"
+authors = ["Martin Molzer <ga65guy@mytum.de>"]
+
+[lib]
+name = "trait_impl"
+path = "src/lib.rs"
+
+[dependencies]
+trait_host = { path = "../trait-host", optional = true }
+delegate = { version = "0.5.1", optional = true }
+
+[features]
+with-override = ["trait_host"]
+with-specialization = ["with-override"]
+with-alternative = ["trait_host/with-alternative", "delegate"]

@@ -1,0 +1,13 @@
+[package]
+name = "trait_consumer"
+version = "0.1.0"
+edition = "2018"
+authors = ["Martin Molzer <ga65guy@mytum.de>"]
+
+[[bin]]
+name = "trait_consumer"
+path = "src/mod.rs"
+
+[dependencies]
+trait_host = { path = "../trait-host" }
+trait_impl = { path = "../trait-impl" }

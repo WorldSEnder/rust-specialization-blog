@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "trait-host",
+    "trait-impl",
+    "trait-consumer"
+]
